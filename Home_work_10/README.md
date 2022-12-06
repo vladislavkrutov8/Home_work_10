@@ -18,12 +18,13 @@
 <img width="380" alt="Screenshot_3" src="https://user-images.githubusercontent.com/110223646/205914606-da2abada-6a79-4750-9c17-b0ae07967202.png">
 
 2. /main - открывает перед пользователем список возможных действий, а именно:
-- /1 - Показать все записи<img width="386" alt="Screenshot_6" src="https://user-images.githubusercontent.com/110223646/205914818-66d6f269-dc7c-4c79-94bc-b0d7f4bec1a6.png">
+ /1 - Показать все записи<img width="386" alt="Screenshot_6" src="https://user-images.githubusercontent.com/110223646/205914818-66d6f269-dc7c-4c79-94bc-b0d7f4bec1a6.png">
 
 - /2 - Найти номер по фамилии
 - /3 - Найти номер по имени
 - /4 - Поиск по номеру телефона
-- /5 - Добавить новую запись<img width="370" alt="Screenshot_4" src="https://user-images.githubusercontent.com/110223646/205914689-c77145cf-1c75-4e9a-b934-55cbf560d453.png">
+- /5 - Добавить новую запись
+<img width="370" alt="Screenshot_4" src="https://user-images.githubusercontent.com/110223646/205914689-c77145cf-1c75-4e9a-b934-55cbf560d453.png">
 
 - /6 - Изменить существующую запись
 - /7 - Удалить запись<img width="369" alt="Screenshot_7" src="https://user-images.githubusercontent.com/110223646/205914848-96f9a0c0-fc5a-4423-852b-f92bdbf018bd.png">
