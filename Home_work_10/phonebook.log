@@ -1,0 +1,788 @@
+[06.12.2022 14:27:01 ] [INFO] [main] [<module>: 8] => Start
+[06.12.2022 14:28:30 ] [INFO] [user_interface] [ñhecking_the_number: 156] => User entered an invalid menu value: {arg}
+[06.12.2022 14:28:36 ] [INFO] [user_interface] [ls_menu: 141] => End
+[06.12.2022 14:33:08 ] [INFO] [main] [<module>: 8] => Start
+[06.12.2022 14:33:41 ] [INFO] [user_interface] [ñhecking_the_number: 156] => User entered an invalid menu value: {arg}
+[06.12.2022 14:33:45 ] [INFO] [user_interface] [ls_menu: 141] => End
+[06.12.2022 14:36:52 ] [INFO] [bot] [main: 44] => The user has selected item number 1
+[06.12.2022 14:36:52 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:\n[b\'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "c:\Users\79967\Desktop\Phonebook_team_development-main\bot.py", line 45, in main
+    bot.send_message(message.chat.id, f'{cr.retrive()}')
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 600, in send_message
+    apihelper.send_message(self.token, chat_id, text, disable_web_page_preview, reply_to_message_id,
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 154, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}']
+
+[06.12.2022 14:36:52 ] [ERROR] [__init__] [__threaded_polling: 420] => A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}']
+[06.12.2022 14:37:18 ] [INFO] [bot] [main: 63] => The user has selected item number 5
+[06.12.2022 14:37:28 ] [INFO] [bot] [get_name: 108] => User entered: {name_it}
+[06.12.2022 14:37:31 ] [INFO] [bot] [get_surname: 116] => User entered: {surname_it}
+[06.12.2022 14:37:34 ] [INFO] [bot] [get_number: 124] => User entered: {number_it}
+[06.12.2022 14:37:50 ] [INFO] [bot] [get_email: 132] => User entered: {email_it}
+[06.12.2022 14:37:50 ] [ERROR] [util] [run: 66] => FileNotFoundError occurred, args=(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "c:\Users\79967\Desktop\Phonebook_team_development-main\bot.py", line 133, in get_email
+    cr.create(name_it, surname_it, number_it, email_it)
+  File "c:\Users\79967\Desktop\Phonebook_team_development-main\crud.py", line 55, in create
+    with open(db_file_name, 'a', newline='') as csv_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: ''
+
+[06.12.2022 14:37:59 ] [INFO] [bot] [main: 44] => The user has selected item number 1
+[06.12.2022 14:39:50 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 14:54:23 ] [INFO] [bot] [main: 44] => The user has selected item number 1
+[06.12.2022 14:54:23 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:\n[b\'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "c:\Users\79967\Desktop\Phonebook_team_development-main\bot.py", line 45, in main
+    lg.logging.info('The user has selected item number 2')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 600, in send_message
+    apihelper.send_message(self.token, chat_id, text, disable_web_page_preview, reply_to_message_id,
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 154, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}']
+
+[06.12.2022 14:54:23 ] [ERROR] [__init__] [__threaded_polling: 420] => A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}']
+[06.12.2022 14:55:58 ] [INFO] [bot] [main: 45] => The user has selected item number 2
+[06.12.2022 14:55:58 ] [INFO] [bot] [main: 50] => The user has selected item number 3
+[06.12.2022 14:55:58 ] [INFO] [bot] [main: 60] => The user has selected item number 5
+[06.12.2022 14:55:58 ] [INFO] [bot] [main: 60] => The user has selected item number 5
+[06.12.2022 14:56:02 ] [INFO] [bot] [find_name: 91] => User entered: {name_it}
+[06.12.2022 14:56:02 ] [INFO] [bot] [find_surname: 84] => User entered: {surname_it}
+[06.12.2022 14:56:02 ] [INFO] [bot] [get_name: 105] => User entered: {name_it}
+[06.12.2022 14:56:02 ] [INFO] [bot] [get_name: 105] => User entered: {name_it}
+[06.12.2022 14:56:04 ] [INFO] [bot] [get_surname: 113] => User entered: {surname_it}
+[06.12.2022 14:56:04 ] [INFO] [bot] [get_surname: 113] => User entered: {surname_it}
+[06.12.2022 14:56:06 ] [INFO] [bot] [get_number: 121] => User entered: {number_it}
+[06.12.2022 14:56:06 ] [INFO] [bot] [get_number: 121] => User entered: {number_it}
+[06.12.2022 14:56:09 ] [INFO] [bot] [get_email: 129] => User entered: {email_it}
+[06.12.2022 14:56:09 ] [INFO] [bot] [get_email: 129] => User entered: {email_it}
+[06.12.2022 14:56:09 ] [ERROR] [util] [run: 66] => FileNotFoundError occurred, args=(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "c:\Users\79967\Desktop\Phonebook_team_development-main\bot.py", line 130, in get_email
+    cr.create(name_it, surname_it, number_it, email_it)
+  File "c:\Users\79967\Desktop\Phonebook_team_development-main\crud.py", line 55, in create
+    with open(db_file_name, 'a', newline='') as csv_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: ''
+
+[06.12.2022 14:57:01 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 14:57:01 ] [ERROR] [__init__] [__threaded_polling: 420] => A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+[06.12.2022 14:59:19 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 14:59:19 ] [ERROR] [__init__] [__threaded_polling: 420] => A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+[06.12.2022 15:00:54 ] [INFO] [bot] [main: 60] => The user has selected item number 5
+[06.12.2022 15:01:05 ] [INFO] [bot] [get_name: 105] => User entered: {name_it}
+[06.12.2022 15:01:09 ] [INFO] [bot] [get_surname: 113] => User entered: {surname_it}
+[06.12.2022 15:01:14 ] [INFO] [bot] [get_number: 121] => User entered: {number_it}
+[06.12.2022 15:01:22 ] [INFO] [bot] [get_email: 129] => User entered: {email_it}
+[06.12.2022 15:01:26 ] [INFO] [bot] [main: 41] => The user has selected item number 1
+[06.12.2022 15:01:26 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:\n[b\'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "c:\Users\79967\Desktop\Phonebook_team_development-main\bot.py", line 42, in main
+    bot.send_message(message.chat.id, f'{cr.retrive()}')
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 600, in send_message
+    apihelper.send_message(self.token, chat_id, text, disable_web_page_preview, reply_to_message_id,
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 154, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}']
+
+[06.12.2022 15:01:27 ] [ERROR] [__init__] [__threaded_polling: 420] => A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}']
+[06.12.2022 15:01:34 ] [INFO] [bot] [main: 41] => The user has selected item number 1
+[06.12.2022 15:01:36 ] [INFO] [bot] [main: 41] => The user has selected item number 1
+[06.12.2022 15:01:41 ] [INFO] [bot] [main: 45] => The user has selected item number 2
+[06.12.2022 15:01:47 ] [INFO] [bot] [find_surname: 84] => User entered: {surname_it}
+[06.12.2022 15:02:05 ] [INFO] [bot] [main: 41] => The user has selected item number 1
+[06.12.2022 15:02:11 ] [INFO] [bot] [main: 41] => The user has selected item number 1
+[06.12.2022 15:02:12 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:\n[b\'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "c:\Users\79967\Desktop\Phonebook_team_development-main\bot.py", line 42, in main
+    bot.send_message(message.chat.id, f'{cr.retrive()}')
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 600, in send_message
+    apihelper.send_message(self.token, chat_id, text, disable_web_page_preview, reply_to_message_id,
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 154, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}']
+
+[06.12.2022 15:02:12 ] [ERROR] [__init__] [__threaded_polling: 420] => A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}']
+[06.12.2022 15:03:10 ] [INFO] [bot] [main: 41] => The user has selected item number 1
+[06.12.2022 15:03:14 ] [INFO] [bot] [main: 41] => The user has selected item number 1
+[06.12.2022 15:03:17 ] [INFO] [bot] [main: 65] => The user has selected item number 6
+[06.12.2022 15:03:33 ] [INFO] [bot] [main: 41] => The user has selected item number 1
+[06.12.2022 15:03:33 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:\n[b\'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "c:\Users\79967\Desktop\Phonebook_team_development-main\bot.py", line 42, in main
+    bot.send_message(message.chat.id, f'{cr.retrive()}')
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 600, in send_message
+    apihelper.send_message(self.token, chat_id, text, disable_web_page_preview, reply_to_message_id,
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 154, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}']
+
+[06.12.2022 15:03:33 ] [ERROR] [__init__] [__threaded_polling: 420] => A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}']
+[06.12.2022 15:05:05 ] [INFO] [bot] [main: 60] => The user has selected item number 5
+[06.12.2022 15:05:12 ] [INFO] [bot] [get_name: 105] => User entered: {name_it}
+[06.12.2022 15:05:23 ] [INFO] [bot] [get_surname: 113] => User entered: {surname_it}
+[06.12.2022 15:05:26 ] [INFO] [bot] [get_number: 121] => User entered: {number_it}
+[06.12.2022 15:05:27 ] [INFO] [bot] [get_email: 129] => User entered: {email_it}
+[06.12.2022 15:06:07 ] [INFO] [bot] [main: 60] => The user has selected item number 5
+[06.12.2022 15:06:14 ] [INFO] [bot] [get_name: 105] => User entered: {name_it}
+[06.12.2022 15:06:17 ] [INFO] [bot] [get_surname: 113] => User entered: {surname_it}
+[06.12.2022 15:06:23 ] [INFO] [bot] [get_number: 121] => User entered: {number_it}
+[06.12.2022 15:06:34 ] [INFO] [bot] [get_email: 129] => User entered: {email_it}
+[06.12.2022 15:06:57 ] [INFO] [bot] [main: 41] => The user has selected item number 1
+[06.12.2022 15:06:57 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:\n[b\'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "c:\Users\79967\Desktop\Phonebook_team_development-main\bot.py", line 42, in main
+    bot.send_message(message.chat.id, f'{cr.retrive()}')
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 600, in send_message
+    apihelper.send_message(self.token, chat_id, text, disable_web_page_preview, reply_to_message_id,
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 154, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}']
+
+[06.12.2022 15:06:57 ] [ERROR] [__init__] [__threaded_polling: 420] => A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}']
+[06.12.2022 15:07:05 ] [INFO] [bot] [main: 41] => The user has selected item number 1
+[06.12.2022 15:07:07 ] [INFO] [bot] [main: 41] => The user has selected item number 1
+[06.12.2022 15:08:59 ] [INFO] [bot] [main: 71] => The user has selected item number 7
+[06.12.2022 15:09:01 ] [INFO] [bot] [delete_contact: 210] => The user has selected item number 7.2
+[06.12.2022 15:09:07 ] [INFO] [bot] [delete_name: 237] => User entered: {name_it}
+[06.12.2022 15:09:12 ] [INFO] [bot] [delete_number: 257] => User entered: {user_id_it}
+[06.12.2022 15:09:12 ] [ERROR] [util] [run: 66] => FileNotFoundError occurred, args=(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "c:\Users\79967\Desktop\Phonebook_team_development-main\bot.py", line 258, in delete_number
+    cr.delete(id=user_id_it)
+  File "c:\Users\79967\Desktop\Phonebook_team_development-main\crud.py", line 126, in delete
+    with open(db_file_name, 'w', newline='') as csv_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: ''
+
+[06.12.2022 15:10:52 ] [INFO] [bot] [main: 41] => The user has selected item number 1
+[06.12.2022 15:10:52 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:\n[b\'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "c:\Users\79967\Desktop\Phonebook_team_development-main\bot.py", line 42, in main
+    bot.send_message(message.chat.id, f'{cr.retrive()}')
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 600, in send_message
+    apihelper.send_message(self.token, chat_id, text, disable_web_page_preview, reply_to_message_id,
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 154, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}']
+
+[06.12.2022 15:11:12 ] [ERROR] [__init__] [__threaded_polling: 420] => A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: message is too long"}']
+[06.12.2022 15:12:05 ] [INFO] [bot] [main: 41] => The user has selected item number 1
+[06.12.2022 15:12:15 ] [INFO] [bot] [main: 60] => The user has selected item number 5
+[06.12.2022 15:12:27 ] [INFO] [bot] [get_name: 105] => User entered: {name_it}
+[06.12.2022 15:12:30 ] [INFO] [bot] [get_surname: 113] => User entered: {surname_it}
+[06.12.2022 15:12:34 ] [INFO] [bot] [get_number: 121] => User entered: {number_it}
+[06.12.2022 15:12:41 ] [INFO] [bot] [get_email: 129] => User entered: {email_it}
+[06.12.2022 15:12:41 ] [ERROR] [util] [run: 66] => FileNotFoundError occurred, args=(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "c:\Users\79967\Desktop\Phonebook_team_development-main\bot.py", line 130, in get_email
+    cr.create(name_it, surname_it, number_it, email_it)
+  File "c:\Users\79967\Desktop\Phonebook_team_development-main\crud.py", line 55, in create
+    with open(db_file_name, 'a', newline='') as csv_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: ''
+
+[06.12.2022 15:13:21 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:13:44 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:14:01 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:14:01 ] [ERROR] [__init__] [__threaded_polling: 420] => A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+[06.12.2022 15:14:41 ] [INFO] [bot] [main: 71] => The user has selected item number 7
+[06.12.2022 15:14:41 ] [INFO] [bot] [main: 41] => The user has selected item number 1
+[06.12.2022 15:15:21 ] [INFO] [bot] [main: 60] => The user has selected item number 5
+[06.12.2022 15:15:41 ] [INFO] [bot] [get_name: 105] => User entered: {name_it}
+[06.12.2022 15:16:01 ] [INFO] [bot] [get_surname: 113] => User entered: {surname_it}
+[06.12.2022 15:16:21 ] [INFO] [bot] [get_number: 121] => User entered: {number_it}
+[06.12.2022 15:16:41 ] [INFO] [bot] [get_email: 129] => User entered: {email_it}
+[06.12.2022 15:17:21 ] [INFO] [bot] [main: 41] => The user has selected item number 1
+[06.12.2022 15:17:48 ] [INFO] [bot] [main: 60] => The user has selected item number 5
+[06.12.2022 15:18:01 ] [INFO] [bot] [get_name: 105] => User entered: {name_it}
+[06.12.2022 15:18:21 ] [INFO] [bot] [get_surname: 113] => User entered: {surname_it}
+[06.12.2022 15:18:41 ] [INFO] [bot] [get_number: 121] => User entered: {number_it}
+[06.12.2022 15:19:01 ] [INFO] [bot] [get_email: 129] => User entered: {email_it}
+[06.12.2022 15:19:21 ] [INFO] [bot] [main: 41] => The user has selected item number 1
+[06.12.2022 15:19:45 ] [INFO] [bot] [main: 71] => The user has selected item number 7
+[06.12.2022 15:20:01 ] [INFO] [bot] [delete_contact: 205] => The user has selected item number 7.1
+[06.12.2022 15:20:21 ] [INFO] [bot] [delete_surname: 227] => User entered: {surname_it}
+[06.12.2022 15:20:41 ] [INFO] [bot] [delete_number: 257] => User entered: {user_id_it}
+[06.12.2022 15:21:21 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:22:41 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:23:21 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:24:01 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:24:21 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:24:41 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:25:21 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:25:41 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:26:41 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:28:01 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:28:21 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:28:41 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:29:01 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:29:41 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:30:21 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:31:01 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:31:41 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
+[06.12.2022 15:32:21 ] [ERROR] [util] [run: 66] => ApiException occurred, args=('A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:\n[b\'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}\']',)
+Traceback (most recent call last):
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 60, in run
+    task(*args, **kwargs)
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 279, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1), timeout=timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 249, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 194, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 60, in _make_request
+    return _check_result(method_name, result)['result']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\79967\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 79, in _check_result
+    raise ApiException(msg, method_name, result)
+telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}']
+
