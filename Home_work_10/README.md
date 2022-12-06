@@ -14,7 +14,8 @@
 
 Для работы с ботом заложено несколько комманд:
 
-1. /start - позволяет начать работу с ботом и перезапускает его<img width="380" alt="Screenshot_3" src="https://user-images.githubusercontent.com/110223646/205914606-da2abada-6a79-4750-9c17-b0ae07967202.png">
+1. /start - позволяет начать работу с ботом и перезапускает его
+<img width="380" alt="Screenshot_3" src="https://user-images.githubusercontent.com/110223646/205914606-da2abada-6a79-4750-9c17-b0ae07967202.png">
 
 2. /main - открывает перед пользователем список возможных действий, а именно:
 - /1 - Показать все записи<img width="386" alt="Screenshot_6" src="https://user-images.githubusercontent.com/110223646/205914818-66d6f269-dc7c-4c79-94bc-b0d7f4bec1a6.png">
