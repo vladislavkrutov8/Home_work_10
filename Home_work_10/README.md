@@ -27,7 +27,8 @@
 <img width="370" alt="Screenshot_4" src="https://user-images.githubusercontent.com/110223646/205914689-c77145cf-1c75-4e9a-b934-55cbf560d453.png">
 
 - /6 - Изменить существующую запись
-- /7 - Удалить запись<img width="369" alt="Screenshot_7" src="https://user-images.githubusercontent.com/110223646/205914848-96f9a0c0-fc5a-4423-852b-f92bdbf018bd.png">
+- /7 - Удалить запись
+<img width="369" alt="Screenshot_7" src="https://user-images.githubusercontent.com/110223646/205914848-96f9a0c0-fc5a-4423-852b-f92bdbf018bd.png">
 
 3. /help - вызывает вспомогательную справку для вызова вышеуказанных команд
 
